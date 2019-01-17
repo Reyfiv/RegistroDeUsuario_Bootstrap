@@ -20,66 +20,67 @@
             font-size: 30pt;
         }
     </style>
-
 </head>
 <body>
+    <form id="form1" runat="server">
 
+            <%--Baner con la imagen--%>
+            <%--<div class ="jumbotron" style="background-color:#ffffff; height: 83px;">
+               <img src="C:\Users\Reyfi Vasquez\Documents\UCNE\Programacion Aplicada 2\Tareas\RegistroUsuarios\RegistroUsuarios\Resources\logo.png" width="170" >
+            </div>--%>
 
+            <%--barra con leyenda menu principal--%>
+            <div class="row">
+                <div class="col-md-12" style="background-color:#ff6624; top: 0px; left: 0px; height: 72px;">
+                    <h3 style="font-family:Freestyle Script; text-align:center; height: 60px; color:blanchedalmond;" class="auto-style2"> <strong>Menu Principal</strong></h3>
+                </div>
+            </div>
 
-    <%--Baner con la imagen--%>
-    <%--<div class ="jumbotron" style="background-color:#ffffff; height: 83px;">
-       <img src="C:\Users\Reyfi Vasquez\Documents\UCNE\Programacion Aplicada 2\Tareas\RegistroUsuarios\RegistroUsuarios\Resources\logo.png" width="170" >
-    </div>--%>
+            <%--menu principal--%>
+           <div class="row">
+               <div>
 
-    <%--barra con leyenda menu principal--%>
-    <div class="row">
-        <div class="col-md-12" style="background-color:#ff6624; top: 0px; left: 0px; height: 72px;">
-            <h3 style="font-family:Freestyle Script; text-align:center; height: 60px; color:blanchedalmond;" class="auto-style2"> <strong>Menu Principal</strong></h3>
-        </div>
-    </div>
+                  <nav class="navbar navbar-default">
+                      <div class="container-fluid">
+                          <div class="navbar-header">
+                             <a class="navbar-brand" href="#">Reyfi's Burger</a>
+                       </div>
 
-    <%--menu principal--%>
-   <div class="row">
-       <div>
+                       <ul class="nav navbar-nav">
+                          <li class="active"><a href="#"><span class="glyphicon glyphicon-book"></span> Registros</a></li>
+                      </ul>
 
-          <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                  <div class="navbar-header">
-                     <a class="navbar-brand" href="#">Reyfi's Burger</a>
+                      <ul class="nav navbar-nav">
+                            <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Consultas</a></li>
+                      </ul>
+
+                      <ul class="nav navbar-nav">
+                            <li class="active"><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
+                      </ul>
+
+                          <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-remove-sign"></span> Cerrar sesion</a></li>
+                          </ul>
+
+                     </div>
+
+                   </nav>
+                 </div>
                </div>
-
-               <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"><span class="glyphicon glyphicon-book"></span> Registros</a></li>
-              </ul>
-
-              <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Consultas</a></li>
-              </ul>
-
-              <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
-              </ul>
-
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-remove-sign"></span> Cerrar sesion</a></li>
-                  </ul>
-
-             </div>
-
-           </nav>
-         </div>
-       </div>
   
-    <%--contenedor y pie de pagina--%>
-    <div class =" container body-content">
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
+            <%--contenedor y pie de pagina--%>
+            <div class =" container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
 
-        <hr />
-        <footer>
-            <p> &copy; <%: DateTime.Now.Year %> - Copyright Reyfi's Burger</p>
-        </footer>
-    </div>
-  
+                <hr />
+                <footer>
+                    <p> &copy; <%: DateTime.Now.Year %> - Copyright Reyfi's Burger</p>
+                </footer>
+            </div>
+
+
+
+     </form>
 </body>
 </html>
