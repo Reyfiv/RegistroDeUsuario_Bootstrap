@@ -17,6 +17,7 @@ namespace Entities
         public string ConfirmarContraseña { get; set; }
         public string TipoUsuario { get; set; }
 
+        public virtual List<DetallePermisos> Permisos { get; set; }
 
         public Usuarios()
         {
@@ -26,6 +27,7 @@ namespace Entities
             Contraseña = string.Empty;
             ConfirmarContraseña = string.Empty;
             TipoUsuario = string.Empty;
+            Permisos = new List<DetallePermisos>();
         }
 
         public Usuarios(string nombreUsuario, string contraseña)
@@ -33,5 +35,7 @@ namespace Entities
             NombreUsuario = nombreUsuario;
             Contraseña = contraseña;
         }
+
+     
     }
 }

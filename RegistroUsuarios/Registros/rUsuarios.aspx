@@ -96,14 +96,11 @@
             <%--hasta aqui--%>
 
             <%--Permisos--%>
-           <%-- <div class="form-group">
+            <div class="form-group">
                 <label for="PermisosDropDownList" class="col-md-3 control-label input-sm" style="font-size:medium"> Permisos</label>
                 <div class="col-md-8">
                    <asp:DropDownList ID="PermisosDropDownList" runat="server" Class="form-control input-sm" style="font-size:medium">
-                            <asp:ListItem Selected="True">Usuario</asp:ListItem>
-                            <asp:ListItem>Productos</asp:ListItem>
-                            <asp:ListItem>Combos</asp:ListItem>
-                            <asp:ListItem>Ventas</asp:ListItem>
+                           
                      </asp:DropDownList>
                 </div>
 
@@ -111,16 +108,15 @@
                      <asp:Button class="btn btn-success btn-md" ID="AgregarButton" runat="server" Text="+" OnClick="AgregarButton_Click"  />
                   </div>
 
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="DatosGridView" runat="server">
                     <Columns>
                         <asp:BoundField HeaderText="Id"></asp:BoundField>
                         <asp:BoundField HeaderText="Descripcion"></asp:BoundField>
                     </Columns>
                 </asp:GridView>
 
-            </div>--%>
+            </div>
             <%--hasta aqui--%>
-
 
             <%--Botones--%>
             <div class="panel">

@@ -11,12 +11,10 @@
             <div class="col-md-4">
                     <asp:DropDownList ID="FiltroDropDownList" runat="server" Class="form-control input-sm" style="font-size:medium">
                         <asp:ListItem Selected="True">Todo</asp:ListItem>
-                        <asp:ListItem >UsuarioId</asp:ListItem>
-                        <asp:ListItem >Nombres</asp:ListItem>
-                        <asp:ListItem>Nombre de usuario</asp:ListItem>
-                        <asp:ListItem>Contraseña</asp:ListItem>
-                        <asp:ListItem>Confirmar contraseña</asp:ListItem>
-                        <asp:ListItem>Tipo de usuario</asp:ListItem>
+                            <asp:ListItem>UsuarioId</asp:ListItem>
+                            <asp:ListItem>Nombres</asp:ListItem>
+                            <asp:ListItem>Nombre de usuario</asp:ListItem>
+                            <asp:ListItem>Tipo de usuario</asp:ListItem>
                     </asp:DropDownList>
             </div>
             <div class="col-md-6">

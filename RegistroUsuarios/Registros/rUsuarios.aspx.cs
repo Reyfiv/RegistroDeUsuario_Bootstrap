@@ -14,8 +14,12 @@ namespace RegistroUsuarios.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Permisos permisos = new Permisos();
+
             if (!Page.IsPostBack)
             {
+               //LlenaCombo();
+
                 int id = Utils.ToInt(Request.QueryString["id"]);
                 if (id > 0)
                 {
@@ -30,8 +34,26 @@ namespace RegistroUsuarios.Registros
                     {
                         LlenaCampos(categoria);
                     }
-                }
+                }   
             }
+        }
+
+        protected void LlenaCombo()
+        {
+            RepositorioBase<Permisos> repositorioBase = new RepositorioBase<Permisos>();
+
+            PermisosDropDownList.DataSource = repositorioBase.GetList(t => true);
+            PermisosDropDownList.DataValueField = "ID";
+            PermisosDropDownList.DataTextField = "Descripcion";
+            PermisosDropDownList.DataBind();
+
+            ViewState["Usuarios"] = new Usuarios();
+        }
+
+        protected void BindGrid()
+        {
+            DatosGridView.DataSource = ((Usuarios)ViewState["Presupuesto"]).Permisos;
+            DatosGridView.DataBind();
         }
 
         protected void GuardarButton_Click(object sender, EventArgs e)
@@ -92,7 +114,19 @@ namespace RegistroUsuarios.Registros
 
         protected void AgregarButton_Click(object sender, EventArgs e)
         {
+            List<DetallePermisos> detalle = new List<DetallePermisos>();
+            Usuarios usuarios = new Usuarios();
+            RepositorioBase<Permisos> repositorio = new RepositorioBase<Permisos>();
 
+            var permiso = repositorio.Buscar(PermisosDropDownList.SelectedIndex);
+
+            usuarios = (Usuarios)ViewState["Usuarios"];
+            detalle.Add(new DetallePermisos(0, permiso.ID, permiso.Descripcion));
+           
+
+            ViewState["Usuarios"] = usuarios;
+
+            this.BindGrid();
         }
 
         private void Limpiar()
@@ -103,7 +137,8 @@ namespace RegistroUsuarios.Registros
             ContraseñaTextBox.Text = string.Empty;
             ConfirmarContraseñaTextBox.Text = string.Empty;
             TipoUsuarioDropDownList.Text = string.Empty;
-
+            ViewState["Usuarios"] = new Usuarios();
+            this.BindGrid();
         }
 
         private Usuarios LlenaClase(Usuarios usuario)
@@ -118,6 +153,7 @@ namespace RegistroUsuarios.Registros
             {
                 usuario.UsuarioId = 0;
             }
+            usuario = (Usuarios)ViewState["Usuarios"];
             usuario.Nombres = NombresTextBox.Text;
             usuario.NombreUsuario = NombreUsuarioTextBox.Text;
             usuario.Contraseña = ContraseñaTextBox.Text;
@@ -133,9 +169,10 @@ namespace RegistroUsuarios.Registros
             NombreUsuarioTextBox.Text = usuarios.NombreUsuario;
             ContraseñaTextBox.Text = usuarios.Contraseña;
             ConfirmarContraseñaTextBox.Text = usuarios.ConfirmarContraseña;
+            this.BindGrid();
         }
 
-        void MostrarMensaje(TiposMensaje tipo, string mensaje)
+        private void MostrarMensaje(TiposMensaje tipo, string mensaje)
         {
 
             ErrorLabel.Text = mensaje;
