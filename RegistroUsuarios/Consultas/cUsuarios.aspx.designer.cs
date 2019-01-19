@@ -13,22 +13,22 @@ namespace RegistroUsuarios.Conusltas {
     public partial class cUsuarios {
         
         /// <summary>
-        /// TipoUsuarioDropDownList control.
+        /// FiltroDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TipoUsuarioDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList FiltroDropDownList;
         
         /// <summary>
-        /// CrtiterioTextBox control.
+        /// CriterioTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CrtiterioTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CriterioTextBox;
         
         /// <summary>
         /// BuscarButton control.

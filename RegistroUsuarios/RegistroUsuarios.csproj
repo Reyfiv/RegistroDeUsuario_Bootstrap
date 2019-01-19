@@ -73,21 +73,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conusltas\cUsuarios.aspx" />
+    <Content Include="Consultas\cUsuarios.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Registros\rUsuarios.aspx" />
+    <Content Include="Resources\2.jpg" />
+    <Content Include="Resources\3.jpg" />
+    <Content Include="Resources\images.jpg" />
     <Content Include="Resources\Logo.png" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conusltas\cUsuarios.aspx.cs">
+    <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Conusltas\cUsuarios.aspx.designer.cs">
+    <Compile Include="Consultas\cUsuarios.aspx.designer.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

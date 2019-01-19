@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cUsuarios.aspx.cs" Inherits="RegistroUsuarios.Conusltas.cUsuarios" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
     <%--Encabezado--%>
     <div class="panel" style="background-color: #ff6624">
         <div class="panel-heading" style="font-family: Freestyle Script; font-size: x-large; color: blanchedalmond">Consulta de Usuarios</div>
@@ -8,9 +9,9 @@
     <%--Entradas de las consulta--%>
     <div class="form-group">
             <div class="col-md-4">
-                    <asp:DropDownList ID="TipoUsuarioDropDownList" runat="server" Class="form-control input-sm" style="font-size:medium">
+                    <asp:DropDownList ID="FiltroDropDownList" runat="server" Class="form-control input-sm" style="font-size:medium">
                         <asp:ListItem Selected="True">Todo</asp:ListItem>
-                        <asp:ListItem>UsuarioId</asp:ListItem>
+                        <asp:ListItem >UsuarioId</asp:ListItem>
                         <asp:ListItem >Nombres</asp:ListItem>
                         <asp:ListItem>Nombre de usuario</asp:ListItem>
                         <asp:ListItem>Contraseña</asp:ListItem>
@@ -19,10 +20,10 @@
                     </asp:DropDownList>
             </div>
             <div class="col-md-6">
-                 <asp:TextBox ID="CrtiterioTextBox" runat="server" class="form-control input-sm" style="font-size:medium"></asp:TextBox>
+                 <asp:TextBox ID="CriterioTextBox" runat="server" class="form-control input-sm" style="font-size:medium"></asp:TextBox>
             </div>
             <div class="col-md-2">
-                <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-md" />
+                <asp:Button ID="BuscarButton" runat="server" Text="Buscar" class="btn btn-info btn-md" OnClick="BuscarButton_Click" />
             </div>
         </div>
     <%--Grid--%>

@@ -1,9 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="rUsuarios.aspx.cs" Inherits="RegistroUsuarios.Registros.rUsuarios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
-
+    
     <div class="panel" style="background-color: #ff6624">
         <div class="panel-heading" style="font-family: Freestyle Script; font-size: x-large; color: blanchedalmond">Registro de Usuarios</div>
 
